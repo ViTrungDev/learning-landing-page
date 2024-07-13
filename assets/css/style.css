@@ -2,6 +2,11 @@
   /* chiều cao va chiều rộng sẽ ko bị thay đối khi bị tác động bới padding và border*/
   box-sizing: border-box;
 }
+:root {
+  --font-heading: "Sen", sans-serif;
+  --color-btn: #ffb900;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -29,14 +34,18 @@ a {
   text-align: center;
   line-height: 50px;
   font-weight: 600;
-  border-radius: 24.5px;
+  border-radius: 999px;
   background: #171100;
+}
+.btn:hover {
+  opacity: 0.9;
 }
 /* ================ header ============== */
 .header {
   background: #fffcf4;
 }
 .header.fixed {
+  z-index: 1;
   position: sticky;
   top: -28px;
 }
@@ -84,4 +93,157 @@ a {
 }
 .header .action .btn-sign-up {
   margin-left: 49px;
+}
+/* ======================= hero ================= */
+.hero {
+  padding: 56px 0px 56px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+/*===================== hero left ============= */
+.hero .media-block {
+  /* lấy 570/1170 ra chiều rộng bên trái */
+  width: 48%;
+  position: relative;
+}
+
+/*  sử lí ảnh */
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+  /* sử dụng object-fit: cover để tránh vỡ ảnh */
+  object-fit: cover;
+}
+.hero .hero-summary {
+  position: absolute;
+  bottom: 48px;
+  right: 0px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+  width: 270px;
+  height: 244px;
+  padding: 24px;
+}
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+.hero-summary .item + item {
+  margin-top: 22px;
+}
+.hero .icon {
+  width: 48px;
+  height: 48px;
+  background-color: #fff9e8;
+  border-radius: 50%;
+  /* căn giữa cho khối */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+.hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+/* ================= hero right ===================== */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.17; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+.hero .desc {
+  margin-top: 22px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67;
+}
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+.hero .hero-btn {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--color-btn);
+}
+.hero .watch-video {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-left: 28px;
+  /* căn theo chục ngang */
+  align-items: center;
+  /* hiện thị hình  bàn tay cho người dùng biết là có thể click được */
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero .watch-video span {
+  margin-left: 14px;
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+.hero .desc-Recent {
+  margin-top: 48px;
+}
+.hero .desc-start strong {
+  margin-right: 15px;
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.23; /* 122.727% */
+}
+.hero .desc-start {
+  margin-top: 8px;
+}
+.hero .desc-start .strong-Courses {
+  margin-left: 28px;
 }
