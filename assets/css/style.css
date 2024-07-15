@@ -404,8 +404,17 @@ a {
   padding: 96px 0px;
   background: #2e2100;
 }
-.feedback .feedback-item {
+.feedback-list {
   display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  /* dịch chuyển feedback */
+  transform: translateX(-100%);
+  transition: all ease 0.5s;
 }
 .feedback .avatar {
   width: 72px;
@@ -447,9 +456,12 @@ a {
 }
 .feedback .content {
   width: 66%;
+  /* justify-content: space-between; */
   margin-left: auto;
 }
 .feedback .content blockquote {
+  margin-right: 135px;
+  /* width: 740px; */
   color: #fff;
   font-weight: 400;
   font-size: 2.6rem;
