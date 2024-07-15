@@ -49,6 +49,22 @@ a {
 .btn:hover {
   opacity: 0.9;
 }
+/* hiện thị dấu ... trên 1 dòng nếu đoạn text quá dài */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* nếu dài quá 2 dòng thì mới hiển thị dấu ... */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+/* nếu người dùng cố tình nhập 1 link dài hoặc 1 từ viết liền làm vỡ giao diện */
+.break-all {
+  /* bẻ gãy tất cả */
+  word-break: break-all;
+}
 /* ================ header ============== */
 .header {
   background: #fffcf4;
@@ -326,6 +342,7 @@ a {
   background: #fff;
 }
 .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid transparent;
   background: #fff;
