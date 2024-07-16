@@ -468,3 +468,44 @@ a {
   font-style: italic;
   line-height: 1.54; /* 153.846% */
 }
+/* ================= features =============== */
+.features {
+  padding: 65px;
+  margin-top: 135px;
+}
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+.features .images img {
+  width: 270px;
+  height: 405px;
+  border-radius: 16px;
+  object-fit: cover; /* tránh vỡ ảnh*/
+}
+.features .images .lower {
+  margin-top: 34px;
+}
+.features .content {
+  width: 41%; /* 470 /1170 */
+  /* căn theo chiều ngang */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.features .content .desc {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+.features .content .cta-btn {
+  margin-top: 32px;
+  width: 137px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: var(--color-btn);
+}
