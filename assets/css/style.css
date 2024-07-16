@@ -468,7 +468,7 @@ a {
   font-style: italic;
   line-height: 1.54; /* 153.846% */
 }
-/* ================= features =============== */
+/* ================= features 1 =============== */
 .features {
   padding: 65px;
   margin-top: 135px;
@@ -508,4 +508,22 @@ a {
   height: 50px;
   flex-shrink: 0;
   background-color: var(--color-btn);
+}
+/* ================= features 2 =============== */
+.features-2nd .body {
+  display: flex;
+  /* đổi chiều trục row  */
+  flex-direction: row-reverse;
+}
+.features-2nd {
+  margin-top: 65px;
+}
+.features-2nd .content {
+  width: 49%;
+}
+.features-2nd .images img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+  object-fit: cover;
 }
